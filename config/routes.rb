@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :exercises
   resources :foods
   resources :targets
   resources :users
