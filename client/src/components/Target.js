@@ -8,4 +8,4 @@ function Target() {
   )
 }
 
-export default Targets
+export default Target
