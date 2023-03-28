@@ -4,7 +4,8 @@ class CreateTargets < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :current_weight
       t.integer :target_weight
-      t.integer :user_id
+      t.integer :calories_goal
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

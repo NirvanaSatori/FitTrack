@@ -1,3 +1,3 @@
 class FoodSerializer < ActiveModel::Serializer
-  attributes :id, :name, :calories, :image_url, :target_id
+  attributes :id, :name, :calories, :image_url, :food_type
 end
