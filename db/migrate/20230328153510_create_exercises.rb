@@ -5,7 +5,6 @@ class CreateExercises < ActiveRecord::Migration[6.1]
       t.integer :duration
       t.string :image_url
       t.integer :calories_burned
-      t.integer :target_id
 
       t.timestamps
     end

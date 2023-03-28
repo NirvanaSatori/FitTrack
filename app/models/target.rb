@@ -1,6 +1,10 @@
 class Target < ApplicationRecord
-    has_many :foods
-    has_many :exercises
-    belongs_to :user
-    validates :name, inclusion: {in: %w("Lose weight","Maintain weight", "Add weight")}
+  belongs_to :user
+  has_many :target_foods
+  has_many :foods, through: :target_foods
+  has_many :target_exercises
+  has_many :exercises, through: :target_exercises
+
+  validates :name, presence: true, inclusion: { in: ['loose weight', 'gain weight', 'maintain weight'], message: "%{value} is not a valid target" }
+
 end
