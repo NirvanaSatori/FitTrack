@@ -18,17 +18,21 @@ class TargetsController < ApplicationController
 
     def create
         target = Target.create!(target_params.merge(user_id: @current_user.id))
-        render json: target, status: :created
-      
+        render json: target,serializer: CustomTargetSerializer, status: :created
     end
 
     def update
-      target = current_user.targets.find(params[:id])
-      target.update!(target_params)
-      render json: target, status: :ok
+      update_target_params = { 
+        current_weight: params[:current_weight], 
+        target_weight: params[:target_weight] }
+      target = @current_user.targets.find(params[:id])
+      target.update!(update_target_params)
+      render json: target, serializer: CustomTargetSerializer, status: :ok
     end
+    
+
     def destroy
-      target = current_user.targets.find(params[:id])
+      target = @current_user.targets.find(params[:id])
       target.destroy
       head :no_content
     end
