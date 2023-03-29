@@ -11,8 +11,8 @@ class UsersController < ApplicationController
 
     def loggedin
         user = User.find_by(id: session[:user_id] ) 
-        if(user)
-           render json: user, {loggedin: true}
+        if user
+           render json: {user: user, loggedin: true}
         else
            render json: {loggedin: false}
         end      
