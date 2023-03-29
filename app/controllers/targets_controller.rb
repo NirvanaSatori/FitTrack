@@ -17,15 +17,9 @@ class TargetsController < ApplicationController
     end
 
     def create
-      # check if the user already has a target
-      user_targets = Target.find_by(user_id: current_user.id)
-      if user_targets.present?
-        render json: { error: "User already has a target" }, status: :unprocessable_entity
-      else
-        # create a target associated with the current user
-        target = Target.create(target_params.merge(user_id: current_user.id))
+        target = Target.create(target_params.merge(user_id: @current_user.id))
         render json: target, status: :created
-      end
+      
     end
 
     def update
