@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Exercise from "./components/Exercise";
 import Target from "./components/Target";
 import Register from "./components/Register";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <BrowserRouter>
       <NavBar/>
       <Routes>
-      <Route path="/" element={<Home />}></Route>
+      <Route path="/home" element={<Home />}></Route>
       <Route path="/food" element={<Food />}></Route>
       <Route path="/exercise" element={<Exercise />}></Route>
       <Route path="/target" element={<Target />}></Route>

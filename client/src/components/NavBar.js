@@ -3,39 +3,32 @@ import { NavLink } from "react-router-dom";
 // import { FcSportsMode } from "react-icons/fc";
 
 function NavBar() {
-  const linkStyles = {
-    width: "150px",
-    height: "40px",
-    paddingTop: "14px",
-    borderRadius: "8px",
-    padding: "2px",
-    alignItems: "center",
-    margin: "0 6px 6px",
-    background: "darkgreen",
-    textDecoration: "none",
-    color: "white",
-    fontSize: "22px",
-  };
-
+  
 
   return (
     <>
     <div className='navbar'>
-      {/* <h1> <FcSportsMode className='icon'/> FitTracker </h1> */}
-      <NavLink to="/">
-          <button className="button">Home</button>
+      <h1> Fit<b className='tracker'>Track</b> </h1>
+      <NavLink to="/home">
+          Home
         </NavLink>
-        <NavLink to="/books">
-          <button className="button">About Us</button>
+        <NavLink to="/aboutus">
+         About Us
         </NavLink>
         <NavLink to="/exercises">
-          <button className="button">Exercises</button>
+          Exercises
         </NavLink>
         <NavLink to="/food">
-          <button className="button">Food</button>
+         Food
         </NavLink>
         <NavLink to="/targets">
-          <button className="button">Targets</button>
+          Targets
+        </NavLink>
+        <NavLink to="/login">
+          Login
+        </NavLink>
+        <NavLink to="/register">
+        Register
         </NavLink>
     
     </div>
