@@ -1,15 +1,15 @@
 class TargetsController < ApplicationController
 
   before_action :authorize
-  skip_before_action :authorize, only: [:index]
+  # skip_before_action :authorize, only: [:index]
   
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
-    def index
-      render json: Target.all, status: :ok
-    end
+    # def index
+    #   render json: Target.all, status: :ok
+    # end
 
     def show
       target = Target.find(params[:id])
