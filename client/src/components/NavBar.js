@@ -9,25 +9,25 @@ function NavBar() {
     <>
     <div className='navbar'>
       <h1> Fit<b className='tracker'>Track</b> </h1>
-      <NavLink to="/home">
+      <NavLink to="/home"  className="nav-link"style={{ textDecoration: 'none'}}>
           Home
         </NavLink>
-        <NavLink to="/aboutus">
+        <NavLink to="/aboutus" className="nav-link" style={{ textDecoration: 'none' }}>
          About Us
         </NavLink>
-        <NavLink to="/exercises">
+        <NavLink to="/exercises"className="nav-link"style={{ textDecoration: 'none' }}>
           Exercises
         </NavLink>
-        <NavLink to="/food">
+        <NavLink to="/food" className="nav-link"style={{ textDecoration: 'none' }}>
          Food
         </NavLink>
-        <NavLink to="/targets">
+        <NavLink to="/targets" className="nav-link"style={{ textDecoration: 'none' }}>
           Targets
         </NavLink>
-        <NavLink to="/login">
+        <NavLink to="/login" className="nav-link"style={{ textDecoration: 'none' }}>
           Login
         </NavLink>
-        <NavLink to="/register">
+        <NavLink to="/register" className="nav-link"style={{ textDecoration: 'none' }}>
         Register
         </NavLink>
     

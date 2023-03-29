@@ -20,5 +20,9 @@
     height: 80vh;
 
   }
-  
+  .nav-link{
+    color: black;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
   

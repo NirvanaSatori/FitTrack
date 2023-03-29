@@ -8,7 +8,7 @@ import Exercise from "./components/Exercise";
 import Target from "./components/Target";
 import Register from "./components/Register";
 import Login from "./components/Login"
-
+import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -32,6 +32,10 @@ function App() {
 
       </BrowserRouter>
       
+    </div>
+    <div>
+    <Footer/>
+    
     </div>
     </>
   );
