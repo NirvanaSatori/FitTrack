@@ -14,6 +14,7 @@
   .tracker{
     color: red;
     font-size: larger;
+
   }
   .background{
     width: 100%;
@@ -21,6 +22,33 @@
    padding: 2px;
 
   }
+
+.navlink{
+    color: red;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .container{
+    position:relative;
+    text-align: center;
+    color: rgb(19, 18, 18);
+  }
+  .bottomleft{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    padding: 4px;
+    color: red;
+    font-weight: bolder;
+
+  }
+  .topright{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    padding: 4px;
+    color: red;
+    font-weight: bold;}
   .nav-link{
     color: black;
     font-weight: 700;
