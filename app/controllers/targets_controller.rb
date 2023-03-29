@@ -17,14 +17,14 @@ class TargetsController < ApplicationController
     end
 
     def create
-        target = Target.create(target_params.merge(user_id: @current_user.id))
+        target = Target.create!(target_params.merge(user_id: @current_user.id))
         render json: target, status: :created
       
     end
 
     def update
       target = current_user.targets.find(params[:id])
-      target.update(target_params)
+      target.update!(target_params)
       render json: target, status: :ok
     end
     def destroy
