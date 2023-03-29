@@ -1,5 +1,4 @@
 class TargetsController < ApplicationController
-
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
@@ -14,22 +13,28 @@ class TargetsController < ApplicationController
     end
 
     def create
-      user_targets = Target.find(:user_id)
+      # check if the user already has a target
+      user_targets = Target.find_by(user_id: current_user.id)
       if user_targets.present?
         render json: { error: "User already has a target" }, status: :unprocessable_entity
       else
+        # create a target associated with the current user
         target = Target.create(target_params.merge(user_id: current_user.id))
         render json: target, status: :created
       end
     end
 
-    # def update
-      
-    # end
+    def update
+      target = current_user.targets.find(params[:id])
+      target.update(target_params)
+      render json: target, status: :ok
+    end
+    def destroy
+      target = current_user.targets.find(params[:id])
+      target.destroy
+      head :no_content
+    end
 
-    # def destroy
-      
-    # end
 
     private
 
@@ -38,7 +43,7 @@ class TargetsController < ApplicationController
     end
 
     def target_params
-      params.permit(:name, :current_weight, :target_weight, :user_id)
+      params.permit(:name, :current_weight, :target_weight)
     end
     
     def render_unprocessable_entity(invalid)
