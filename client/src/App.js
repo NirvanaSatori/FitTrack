@@ -27,9 +27,8 @@ function App() {
       <Route path="/login" element={<Login />}></Route>
 
       </Routes>
-
-
       </BrowserRouter>
+<<<<<<< HEAD
      
       
     {/* </div>
@@ -38,6 +37,11 @@ function App() {
     
     </div>
     // </>
+=======
+      <Footer/>
+    </div>
+  
+>>>>>>> cdc3a4f93f5b99f9db2e45247479e459693d1f49
   );
 }
 

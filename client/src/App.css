@@ -14,6 +14,7 @@
   .tracker{
     color: red;
     font-size: larger;
+
   }
   .background{
     width: 100%;
@@ -21,6 +22,33 @@
    padding: 2px;
 
   }
+
+.navlink{
+    color: red;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .container{
+    position:relative;
+    text-align: center;
+    color: rgb(19, 18, 18);
+  }
+  .bottomleft{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    padding: 4px;
+    color: red;
+    font-weight: bolder;
+
+  }
+  .topright{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    padding: 4px;
+    color: red;
+    font-weight: bold;}
   .nav-link{
     color: black;
     font-weight: 700;
@@ -76,6 +104,74 @@
     margin-top: 20px;
   }
   
+<<<<<<< HEAD
   .register-form button[type='submit']:hover {
     background-color: #0069d9;
   }
+=======
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+     
+  }
+  .column {
+    float: left;
+    width: 390px;
+    padding: 10px;
+    height: 550px; /* Should be removed. Only for demonstration */
+    background-color: rgb(4, 4, 4);
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    
+    
+    
+  }
+  .maindiv{
+    background-color: black;
+    color: white;
+    
+    
+
+  }
+  h6{
+    text-align: center;
+    color: white;
+    padding: 5px;
+  }
+  h3{
+    text-align: center;
+    color: white;
+  }
+  h4{
+    text-align: center;
+    color:red;
+    padding: 10px;
+  }
+  .exercise{
+   
+  border: 3px solid rgb(235, 44, 70);
+  position: relative;
+  /* left: 50%; */
+  width: 100%; /*Make sure the image occupies whole parent div's width*/
+  height: 50%; /* Sets the height to parent div's size */
+  }
+  .exercise1{
+   
+    border: 3px solid rgb(235, 44, 70);
+    position: relative;
+    /* left: 50%; */
+    width: 100%; /*Make sure the image occupies whole parent div's width*/
+    height: 50%; /* Sets the height to parent div's size */
+    }
+    p{
+      color:white;
+    }
+>>>>>>> cdc3a4f93f5b99f9db2e45247479e459693d1f49

@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   
-  resources :target_foods
-  resources :target_exercises
-  resources :targets
-  resources :exercises
-  resources :foods
   resources :users, only: [:create]
+  resources :targets, except: [:index]
+  resources :foods
+  resources :exercises
+  # resources :target_foods
+  # resources :target_exercises
+ 
+ 
 
   post "/login", to:"sessions#login"
   get "/sessions", to: "sessions#index"

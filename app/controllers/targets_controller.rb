@@ -1,15 +1,15 @@
 class TargetsController < ApplicationController
 
   before_action :authorize
-  skip_before_action :authorize, only: [:index]
+  # skip_before_action :authorize, only: [:index]
   
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
-    def index
-      render json: Target.all, status: :ok
-    end
+    # def index
+    #   render json: Target.all, status: :ok
+    # end
 
     def show
       target = Target.find(params[:id])
@@ -18,17 +18,21 @@ class TargetsController < ApplicationController
 
     def create
         target = Target.create!(target_params.merge(user_id: @current_user.id))
-        render json: target, status: :created
-      
+        render json: target,serializer: CustomTargetSerializer, status: :created
     end
 
     def update
-      target = current_user.targets.find(params[:id])
-      target.update!(target_params)
-      render json: target, status: :ok
+      update_target_params = { 
+        current_weight: params[:current_weight], 
+        target_weight: params[:target_weight] }
+      target = @current_user.targets.find(params[:id])
+      target.update!(update_target_params)
+      render json: target, serializer: CustomTargetSerializer, status: :ok
     end
+    
+
     def destroy
-      target = current_user.targets.find(params[:id])
+      target = @current_user.targets.find(params[:id])
       target.destroy
       head :no_content
     end
