@@ -1,6 +1,7 @@
 class FoodsController < ApplicationController
 
-    rescue_from ActiveRecord::RecordInvalid, with: :render_response_not_found
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
+    rescue_from ActiveRecord::RecordNotFound, with: :render_response_not_found
     skip_before_action :authorize
 
     def index 
@@ -27,6 +28,10 @@ class FoodsController < ApplicationController
     private
     def render_response_not_found
         render json:{error: ["Resource not found"]}, status: :not_found 
+    end
+
+    def render_unprocessable_entity(invalid)
+        render json: {error: invalid.record.errors.full_messages }, status: :unprocessable_entity
     end
 
     def food_params 
