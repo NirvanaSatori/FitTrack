@@ -9,6 +9,15 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
 
+    def loggedin
+        user = User.find_by(id: session[:user_id] ) 
+        if(user)
+           render json: user, {loggedin: true}
+        else
+           render json: {loggedin: false}
+        end      
+      end
+
     private 
 
     def user_params
