@@ -10,6 +10,23 @@ const Login = () => {
     console.log(`Username: ${username}, Password: ${password}`);
   };
 
+  fetch('/api/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // handle successful login, e.g. redirect to dashboard
+    })
+    .catch((error) => console.error(error));
+
+
+
+
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
