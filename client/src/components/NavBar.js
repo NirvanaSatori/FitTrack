@@ -24,10 +24,10 @@ function NavBar() {
         <NavLink to="/targets" className="nav-link"style={{ textDecoration: 'none' }}>
           Targets
         </NavLink>
-        <NavLink to="/login" className="nav-link"style={{ textDecoration: 'none' }}>
+        <NavLink to="/login" className="navlink"style={{ textDecoration: 'none' }}>
           Login
         </NavLink>
-        <NavLink to="/register" className="nav-link"style={{ textDecoration: 'none' }}>
+        <NavLink to="/register" className="navlink"style={{ textDecoration: 'none' }}>
         Register
         </NavLink>
     
