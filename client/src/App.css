@@ -54,3 +54,67 @@
     color: red;
     font-weight: bold;
   }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+     
+  }
+  .column {
+    float: left;
+    width: 390px;
+    padding: 10px;
+    height: 550px; /* Should be removed. Only for demonstration */
+    background-color: rgb(4, 4, 4);
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    
+    
+    
+  }
+  .maindiv{
+    background-color: black;
+    color: white;
+    
+    
+
+  }
+  h6{
+    text-align: center;
+    color: white;
+    padding: 5px;
+  }
+  h3{
+    text-align: center;
+    color: white;
+  }
+  h4{
+    text-align: center;
+    color:red;
+    padding: 10px;
+  }
+  .exercise{
+   
+  border: 3px solid rgb(235, 44, 70);
+  position: relative;
+  /* left: 50%; */
+  width: 100%; /*Make sure the image occupies whole parent div's width*/
+  height: 50%; /* Sets the height to parent div's size */
+  }
+  .exercise1{
+   
+    border: 3px solid rgb(235, 44, 70);
+    position: relative;
+    /* left: 50%; */
+    width: 100%; /*Make sure the image occupies whole parent div's width*/
+    height: 50%; /* Sets the height to parent div's size */
+    }
+    p{
+      color:white;
+    }

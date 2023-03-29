@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.0"
+  },
+  "dependencies": {
+    "react-icons": "^4.8.0"
   }
 }
