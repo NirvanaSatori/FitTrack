@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import Exercise from "./components/Exercise";
 import Target from "./components/Target";
 import Register from "./components/Register";
-import Login from "./components/Login";
+import Login from "./components/Login"
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <Route path="/target" element={<Target />}></Route>
       <Route path="/register" element={<Register />}></Route>
       <Route path="/aboutus" element={<AboutUs />}></Route>
-      <Route path="/login" element={<login/>}></Route>
+      <Route path="/login" element={<Login />}></Route>
 
 
 
