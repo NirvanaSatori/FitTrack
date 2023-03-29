@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_28_194009) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_03_28_194009) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,8 +19,8 @@ ActiveRecord::Schema.define(version: 2023_03_28_194009) do
     t.integer "duration"
     t.string "image_url"
     t.integer "calories_burned"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "foods", force: :cascade do |t|
@@ -29,15 +28,15 @@ ActiveRecord::Schema.define(version: 2023_03_28_194009) do
     t.integer "calories"
     t.string "image_url"
     t.string "food_type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "target_exercises", force: :cascade do |t|
     t.bigint "target_id", null: false
     t.bigint "exercise_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["exercise_id"], name: "index_target_exercises_on_exercise_id"
     t.index ["target_id"], name: "index_target_exercises_on_target_id"
   end
@@ -45,8 +44,8 @@ ActiveRecord::Schema.define(version: 2023_03_28_194009) do
   create_table "target_foods", force: :cascade do |t|
     t.bigint "target_id", null: false
     t.bigint "food_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["food_id"], name: "index_target_foods_on_food_id"
     t.index ["target_id"], name: "index_target_foods_on_target_id"
   end
@@ -56,8 +55,8 @@ ActiveRecord::Schema.define(version: 2023_03_28_194009) do
     t.integer "current_weight"
     t.integer "target_weight"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_targets_on_user_id"
   end
 
@@ -66,8 +65,8 @@ ActiveRecord::Schema.define(version: 2023_03_28_194009) do
     t.string "email"
     t.string "password_digest"
     t.string "gender"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "target_exercises", "exercises"

@@ -7,6 +7,7 @@ class Target < ApplicationRecord
 
   validates :current_weight, presence: true
   validates :target_weight, presence: true
+  validates :user_id, uniqueness: true
   validates :name, presence: true, inclusion: { in: ['loose weight', 'gain weight', 'maintain weight'], message: "%{value} is not a valid target" }
 
 end
