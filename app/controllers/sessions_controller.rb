@@ -1,11 +1,6 @@
 class SessionsController < ApplicationController
 
-    # skip_before_action :authorize, only: [:login, :index]
-
-    def index
-        user = User.all
-        render json: user.to_json
-    end
+    skip_before_action :authorize, only: [:login]
 
     def login        
         user = User.find_by(email: params[:email])
