@@ -5,6 +5,8 @@ class Target < ApplicationRecord
   has_many :target_exercises
   has_many :exercises, through: :target_exercises
 
+  validates :current_weight, presence: true
+  validates :target_weight, presence: true
   validates :name, presence: true, inclusion: { in: ['loose weight', 'gain weight', 'maintain weight'], message: "%{value} is not a valid target" }
 
 end

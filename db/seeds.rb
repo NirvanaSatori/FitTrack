@@ -15,14 +15,15 @@ User.destroy_all
 
 
 # Create Users
-user1 = User.create(username: 'john_doe', email: 'john_doe@example.com', password_digest: 'password')
-user2 = User.create(username: 'jane_doe', email: 'jane_doe@example.com', password_digest: 'password')
-user3 = User.create(username: 'bob_smith', email: 'bob_smith@example.com', password_digest: 'password')
+user1 = User.create(username: 'john_doe', email: 'john_doe@example.com', password_digest: 'password', gender: 'male')
+user2 = User.create(username: 'jane_doe', email: 'jane_doe@example.com', password_digest: 'password', gender: 'female')
+user3 = User.create(username: 'bob_smith', email: 'bob_smith@example.com', password_digest: 'password', gender: 'male')
 
 # Create Target
-target1 = Target.create(name: 'loose weight', user: user1)
-target2 = Target.create(name: 'maintain weight', user: user2)
-target3 = Target.create(name: 'gain weight', user: user3)
+target1 = Target.create(current_weight: 70, target_weight: 60, name: 'loose weight', user: user1)
+target2 = Target.create(current_weight: 75, target_weight: 85, name: 'gain weight', user: user2)
+target3 = Target.create(current_weight: 80, target_weight: 80, name: 'maintain weight', user: user3)
+
 
 # Create Foods
 food1 = Food.create(name: 'Salmon', calories: 350, food_type: 'Seafood', image_url: 'https://www.example.com/salmon.jpg')
