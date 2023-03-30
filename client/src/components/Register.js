@@ -9,7 +9,24 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted:', { username, email, password });
-    // TODO: Send form data to backend API
+
+    fetch('/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, email, password })
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Registration successful!');
+        } else {
+          console.error('Registration failed.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   };
 
   return (
