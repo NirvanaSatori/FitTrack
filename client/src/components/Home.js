@@ -10,7 +10,7 @@ function Home() {
         
         <img className="background"
           alt="gym"
-          src="https://t4.ftcdn.net/jpg/00/84/54/71/360_F_84547156_ZFXIAmvcgfHNpIoMBwWQm02YZpQ29SUY.jpg"
+          src="https://d3h9ln6psucegz.cloudfront.net/wp-content/uploads/2016/10/Full-Body-Workouts-of-the-Legends.jpg"
         />
         <div className='topright'> NO PAIN, NO GAIN</div>
         <div className='bottomleft'> FEEL THE POWER WITHIN</div>
