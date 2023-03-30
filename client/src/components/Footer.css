@@ -12,9 +12,17 @@
   
 } */
 
-.footer-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+ .main-footer{
+  padding: ;
+  background: rgb(177, 179, 177);
+  font: white;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left:0;
+  bottom:0;
+
+  
+
+ }
   
