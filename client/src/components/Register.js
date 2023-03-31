@@ -5,17 +5,18 @@ function Register() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [gender, setGender] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted:', { username, email, password });
+    console.log('Submitted:', { username, email, password, gender });
 
     fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ username, email, password })
+      body: JSON.stringify({ username, email, password, gender })
     })
       .then(response => {
         if (response.ok) {
@@ -44,6 +45,10 @@ function Register() {
         <label>
           Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <label>
+          gender:
+          <input type="text" value={gender} onChange={(e) => setGender(e.target.value)} />
         </label>
         <button type="submit">Register</button>
       </form>
