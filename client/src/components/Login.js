@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
+import Swal from 'sweetalert2';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -7,6 +9,23 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (email === 'setEmail' && password === 'password') {
+      // Show success alert
+      Swal.fire({
+        icon: 'success',
+        title: 'Login Successful',
+        text: 'Welcome back, Admin!',
+      });
+    } else {
+      // Show error alert
+      Swal.fire({
+        icon: 'error',
+        title: 'Login Failed',
+        text: 'Incorrect email or password',
+      });
+    }
+  // };
     console.log(`email: ${email}, Password: ${password}`);
 
     fetch('/login', {
