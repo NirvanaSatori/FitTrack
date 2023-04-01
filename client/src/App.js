@@ -29,11 +29,11 @@ function App() {
       <Route path="/login" element={<Login />}></Route>
 
       </Routes> 
-      <Footer/>
+      
       </BrowserRouter>
-     
+      <Footer/>
     </div>
-  
+    
   );
 }
 
