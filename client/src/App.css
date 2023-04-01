@@ -1,7 +1,4 @@
-*{
-  margin: 0;
 
-}
 
 
 .navbar {
@@ -9,7 +6,7 @@
   align-content: center;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(200, 141, 240);
+  background-color: rgb(164, 144, 247);
   width: 100%;
   height: 50px;
   align-items: center;}
@@ -18,23 +15,13 @@
     font-size: larger;
 
   }
-  .background{
-    width: 100%;
-    height: 100vh;
-   padding: 2px;
-
-  }
-
+  
 .navlink{
     color: red;
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .container{
-    position:relative;
-    text-align: center;
-    color: rgb(19, 18, 18);
-  }
+  
   
   
   .nav-link{
@@ -43,61 +30,235 @@
     font-family: Arial, Helvetica, sans-serif;
     
   }
-  .register-form {
+  
+  
+  .card {
+    width: 30%;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* .cardimage {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+  }
+  .container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+  }
+  
+  .text-container {
+    width: 45%;
+    float: right;
+  }
+  
+  .image-container {
+    width: 45%;
+    float: left;
+  }
+  
+  .container-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  } */
+  /* .container{
+    position: relative;
+    width: auto;
+    height: 700px; */
+    
+  
+    
+    
+  
+  
+  /* .container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+  }
+  
+  .text-container {
+    width: 45%;
+    float: right;
+  }
+  
+  .image-container {
+    width: 45%;
+    float: left;
+  }
+  
+  .container-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  
+  .card {
+    width: 30%;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .cardimage {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+  }
+  
+  .cardtext {
+    padding: 1rem;
+  }
+  
+  /* @media (max-width: 768px) {
+    .container1 {
+      flex-direction: column;
+    } */
+    /* .text-container {
+      width: 100%;
+      float: none;
+    }
+    .image-container {
+      width: 100%;
+      float: none;
+    }
+    .container-two {
+      flex-direction: column;
+      height: auto;
+    }
+    .card {
+      width: 300px;
+      height: 400px;
+    }
+   */ 
+   .maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .text-container {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+  }
+  
+  .image-container {
+    flex: 1;
+    max-width: 30%;
+    margin-left: 20px;
+  }
+  
+  .img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .container-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 50px 0;
+  }
+  
+  .card {
+    width: calc(33.33% - 20px);
+    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #ccc;
-    width: 400px;
-    background-color: #f5f5f5;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
   }
   
-  .register-form h1 {
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-weight: bold;
+  .cardimage {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .register-form label {
+  .exercise {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .cardtext {
+    width: 100%;
+    height: 30%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+  }
+  .pro{
+    color: yellow;
   }
   
-  .register-form input[type='text'],
-  .register-form input[type='email'],
-  .register-form input[type='password'] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: blueviolet;
   }
   
-  .register-form button[type='submit'] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
   }
   
-  .register-form button[type='submit']:hover {
-    background-color: #0069d9;
+  h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
   }
-
-
-
   
-
- 
+  p {
+    text-align: center;
+  }
