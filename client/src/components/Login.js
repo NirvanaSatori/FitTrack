@@ -2,28 +2,30 @@ import React, { useState } from 'react';
 import './Login.css';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Username: ${username}, Password: ${password}`);
+    console.log(`email: ${email}, Password: ${password}`);
+
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        // handle successful login, e.g. redirect to dashboard
+      })
+      .catch((error) => console.error(error));
+  
   };
 
-  fetch('/api/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ username, password }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      // handle successful login, e.g. redirect to dashboard
-    })
-    .catch((error) => console.error(error));
-
+  
 
 
 
@@ -32,13 +34,13 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
         <div className="form-group">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="email">email</label>
           <input
             type="text"
             className="form-control"
-            id="username"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
+            id="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
             required
           />
         </div>
