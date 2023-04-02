@@ -15,9 +15,9 @@ User.destroy_all
 
 
 # Create Users
-user1 = User.create(username: 'john_doe', email: 'john_doe@example.com', password: 'password', gender: 'male')
-user2 = User.create(username: 'jane_doe', email: 'jane_doe@example.com', password: 'password', gender: 'female')
-user3 = User.create(username: 'bob_smith', email: 'bob_smith@example.com', password: 'password', gender: 'male')
+user1 = User.create(username: 'john_doe', email: 'john_doe@example.com', password_digest: 'password', gender: 'male')
+user2 = User.create(username: 'jane_doe', email: 'jane_doe@example.com', password_digest: 'password', gender: 'female')
+user3 = User.create(username: 'bob_smith', email: 'bob_smith@example.com', password_digest: 'password', gender: 'male')
 
 # Create Target
 target1 = Target.create(current_weight: 70, target_weight: 60, name: 'loose weight', user: user1)

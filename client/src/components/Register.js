@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './Register.css';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [gender, setGender] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ function Register() {
             timer: 1500,
             showConfirmButton: false
           });
+          navigate('/login');
         } else {
           Swal.fire({
             icon: 'error',
