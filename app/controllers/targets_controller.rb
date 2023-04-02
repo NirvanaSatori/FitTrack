@@ -18,7 +18,7 @@ class TargetsController < ApplicationController
 
     def create
         target = Target.create!(target_params.merge(user_id: @current_user.id))
-        render json: target,serializer: CustomTargetSerializer, status: :created
+        render json: target, status: :created
     end
 
     def update

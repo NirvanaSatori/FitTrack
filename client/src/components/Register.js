@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
+import Swal from 'sweetalert2';
 
 function Register() {
   const [username, setUsername] = useState('');
@@ -10,7 +11,7 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted:', { username, email, password, gender });
-
+  
     fetch('/users', {
       method: 'POST',
       headers: {
@@ -20,16 +21,32 @@ function Register() {
     })
       .then(response => {
         if (response.ok) {
-          console.log('Registration successful!');
+          Swal.fire({
+            icon: 'success',
+            title: 'Registration successful!',
+            timer: 1500,
+            showConfirmButton: false
+          });
         } else {
-          console.error('Registration failed.');
+          Swal.fire({
+            icon: 'error',
+            title: 'Registration failed.',
+            timer: 1500,
+            showConfirmButton: false
+          });
         }
       })
       .catch(error => {
         console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'An error occurred.',
+          timer: 1500,
+          showConfirmButton: false
+        });
       });
   };
-
+  
   return (
     <div className="register-container">
       <form onSubmit={handleSubmit} className="register-form">

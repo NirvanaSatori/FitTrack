@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Navigate to="home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/food" element={<Food />} />
-          <Route path="/target" element={<Target />} />
+          <Route path="/targets" element={<Target />} />
           <Route path="/exercise" element={<Exercise />} />
           <Route path="/register" element={<Register />} />
           <Route path="/aboutus" element={<AboutUs />} />

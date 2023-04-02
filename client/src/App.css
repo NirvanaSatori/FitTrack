@@ -52,7 +52,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    align-content: end;
+    align-content: flex-end;
     background-color: rgb(245, 244, 251);
   }
   
