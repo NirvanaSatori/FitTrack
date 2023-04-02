@@ -15,6 +15,8 @@ function Home() {
 
         <div className='text-container'>
         <h2>TIME TO GET <b className='pro'>PROLIFE FITNESS</b></h2>
+        <p className='planding'> Fit<b className='track'>Track</b>, is a fitness website designed to help users maintain a healthy lifestyle by suggesting recommended
+           food and exercises to achieve a specified target</p>
         
       
 

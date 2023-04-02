@@ -140,7 +140,7 @@
     align-items: center;
   }
   .pro{
-    color: rgb(126, 6, 128);
+    color: #6f55f2;
   }
   
   h2 {
@@ -151,9 +151,11 @@
   
   h3 {
     margin: 0;
-    font-size: 2rem;
-    color: rgb(115, 5, 161);
+    font-size: 2.2rem;
+    color: #6f55f2;
     font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
   }
   
@@ -167,4 +169,13 @@
   
   p {
     text-align: center;
+  }
+  .planding{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight:bold;
+  }
+  .track{
+    color: red;
+
   }
