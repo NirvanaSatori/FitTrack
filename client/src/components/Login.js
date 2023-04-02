@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Login.css';
 import Swal from 'sweetalert2';
 
-
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,7 +24,7 @@ const Login = () => {
         text: 'Incorrect email or password',
       });
     }
-  // };
+
     console.log(`email: ${email}, Password: ${password}`);
 
     fetch('/login', {
@@ -41,12 +40,7 @@ const Login = () => {
         // handle successful login, e.g. redirect to dashboard
       })
       .catch((error) => console.error(error));
-  
   };
-
-  
-
-
 
   return (
     <div className="container">

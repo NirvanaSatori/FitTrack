@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes,BrowserRouter, Navigate } from "react-router-dom";
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import AboutUs from "./components/AboutUs";
 import Food from "./components/Food";
@@ -8,32 +8,26 @@ import Exercise from "./components/Exercise";
 import Target from "./components/Target";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    
     <div className="App">
-     
       <BrowserRouter>
-      <NavBar/>
-
-      <Routes>
-      <Route path='/' element= {<Navigate to ={"Register"}/>}/>
-      <Route path="/home" element={<Home />}></Route>
-      <Route path="/food" element={<Food />}></Route>
-      <Route path="/target" element={<Target />}></Route>
-      <Route path="/exercise" element={<Exercise />}></Route>
-      <Route path="/register" element={<Register />}></Route>
-      <Route path="/aboutus" element={<AboutUs />}></Route>
-      <Route path="/login" element={<Login />}></Route>
-
-      </Routes> 
-      
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Navigate to="home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/food" element={<Food />} />
+          <Route path="/target" element={<Target />} />
+          <Route path="/exercise" element={<Exercise />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
       </BrowserRouter>
-      <Footer/>
+      <Footer />
     </div>
-    
   );
 }
 
