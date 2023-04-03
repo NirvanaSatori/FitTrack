@@ -5,10 +5,7 @@ Rails.application.routes.draw do
   resources :exercises
   resources :target_foods
   resources :target_exercises
-  resources :targets do
-    resources :target_exercises, only: [:index]
-    get 'foods', to: 'target_foods#index'
-  end
+  resources :targets 
  
   post "/login", to:"sessions#login"
   get "/sessions", to: "sessions#index"

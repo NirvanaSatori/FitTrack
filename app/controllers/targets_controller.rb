@@ -7,18 +7,18 @@ class TargetsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
-    # def index
-    #   render json: Target.all, status: :ok
-    # end
+    def index
+      render json: Target.all, status: :ok
+    end
 
     def show
       target = Target.find(params[:id])
-      render json: target, serializer: CustomTargetSerializer, status: :ok
+      render json: target, include: [:target, "target.target_foods", "target.target_exercises"], status: :ok
     end
 
     def create
         target = Target.create!(target_params.merge(user_id: @current_user.id))
-        render json: target, status: :created
+        render json: target, serializer: CustomTargetSerializer, status: :created
     end
 
     def update

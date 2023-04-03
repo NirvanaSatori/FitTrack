@@ -12,22 +12,23 @@ const Login = () => {
     if (email === 'setEmail' && password === '') {
       // Show success alert
       Swal.fire({
-        icon: 'success',
-        title: 'Login Successful',
-        text: 'Welcome back, Admin!',
+        icon: 'error',
+        title: 'Login Failed',
+        text: 'Incorrect email or password',
       });
     } else {
       // Show error alert
       Swal.fire({
-        icon: 'error',
-        title: 'Login Failed',
-        text: 'Incorrect email or password',
+
+        icon: 'success',
+        title: 'Login Successful',
+        text: 'Welcome back, Admin!',
       });
     }
 
     console.log(`email: ${email}, Password: ${password}`);
 
-    fetch('/login', {
+    fetch( "/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,6 +39,7 @@ const Login = () => {
       .then((data) => {
         console.log(data);
         // handle successful login, e.g. redirect to dashboard
+        window.location.href = '/targets';
       })
       .catch((error) => console.error(error));
   };

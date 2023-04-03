@@ -9,6 +9,7 @@ import Target from "./components/Target";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/home" element={<Home />} />
      
           <Route path="/food" element={<Food />} />
+          <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/targets" element={<Target />} />
           <Route path="/exercise" element={<Exercise />} />
           <Route path="/register" element={<Register />} />
