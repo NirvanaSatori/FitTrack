@@ -10,7 +10,7 @@ function Target() {
 
   useEffect(() => {
     // send a GET request to the backend to retrieve the current user's information
-    fetch('/users/me')
+    fetch('/me')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -46,7 +46,7 @@ function Target() {
           confirmButtonText: 'OK'
         }).then(() => {
           // redirect to the dashboard
-          window.location.href = '/';
+          window.location.href = '/dashboard';
         });
       })
       .catch(error => {
@@ -62,23 +62,34 @@ function Target() {
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="mb-4">Set a Target</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input id="name" type="text" className="form-control" value={name} onChange={(event) => setName(event.target.value)} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="current-weight">Current weight:</label>
-          <input id="current-weight" type="text" className="form-control" value={currentWeight} onChange={(event) => setCurrentWeight(event.target.value)} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="target-weight">Target weight:</label>
-          <input id="target-weight" type="text" className="form-control" value={targetWeight} onChange={(event) => setTargetWeight(event.target.value)} />
-        </div>
-        <button type="submit" className="btn btn-primary">Set Target</button>
-      </form>
+    <div className="target-container">
+      <div className="target-types">
+        <h2>Targets can either be:</h2>
+        <ul>
+          <li>loose weight</li>
+          <li>Gain weight</li>
+          <li>Maintain weight</li>
+        </ul>
+      </div>
+
+      <div className="target-form">
+        <h2>Set a Target</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Target:</label>
+            <input id="name" type="text" className="form-control" value={name} onChange={(event) => setName(event.target.value)} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="current-weight">Current weight:</label>
+            <input id="current-weight" type="text" className="form-control" value={currentWeight} onChange={(event) => setCurrentWeight(event.target.value)} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="target-weight">Target weight:</label>
+            <input id="target-weight" type="text" className="form-control" value={targetWeight} onChange={(event) => setTargetWeight(event.target.value)} />
+          </div>
+          <button type="submit" className="btn btn-primary">Set Target</button>
+        </form>
+      </div>
     </div>
   );
 }

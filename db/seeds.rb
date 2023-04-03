@@ -26,9 +26,9 @@ target3 = Target.create(current_weight: 80, target_weight: 80, name: 'maintain w
 
 
 # Create Foods
-food1 = Food.create(name: 'Salmon', calories: 350, food_type: 'Seafood', image_url: 'https://www.example.com/salmon.jpg')
-food2 = Food.create(name: 'Broccoli', calories: 55, food_type: 'Vegetable', image_url: 'https://www.example.com/broccoli.jpg')
-food3 = Food.create(name: 'Brown Rice', calories: 220, food_type: 'Grain', image_url: 'https://www.example.com/brownrice.jpg')
+food1 = Food.create(name: 'Salmon', calories: 350, food_type: 'Seafood', image_url: 'https://rb.gy/ulpw')
+food2 = Food.create(name: 'Broccoli', calories: 55, food_type: 'Vegetable', image_url: 'https://rb.gy/cc35')
+food3 = Food.create(name: 'Brown Rice', calories: 220, food_type: 'Grain', image_url: 'https://rb.gy/nfrx')
 
 # Associate Foods with Target
 TargetFood.create(target: target1, food: food1)
@@ -42,9 +42,9 @@ TargetFood.create(target: target3, food: food1)
 TargetFood.create(target: target3, food: food3)
 
 # Create Exercises
-exercise1 = Exercise.create(name: 'Running', duration: 30, calories_burned: 300, image_url: 'https://www.example.com/running.jpg')
-exercise2 = Exercise.create(name: 'Weightlifting', duration: 45, calories_burned: 200, image_url: 'https://www.example.com/weightlifting.jpg')
-exercise3 = Exercise.create(name: 'Yoga', duration: 60, calories_burned: 150, image_url: 'https://www.example.com/yoga.jpg')
+exercise1 = Exercise.create(name: 'Running', duration: 30, calories_burned: 300, image_url: 'https://rb.gy/yca2')
+exercise2 = Exercise.create(name: 'Weightlifting', duration: 45, calories_burned: 200, image_url: 'https://rb.gy/vy45')
+exercise3 = Exercise.create(name: 'Yoga', duration: 60, calories_burned: 150, image_url: 'https://rb.gy/c1tz')
 
 # Associate Exercises with Target
 TargetExercise.create(target: target1, exercise: exercise1)

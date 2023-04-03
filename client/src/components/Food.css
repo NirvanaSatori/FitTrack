@@ -1,77 +1,64 @@
-.food-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .food-card {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .food-name {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: none;
-  }
-  
-  .food-image {
-    display: block;
-    width: 100%;
-    height: 200px;
-    margin-bottom: 10px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .food-description {
-    display: block;
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .delete-button {
-    display: block;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .add-button {
-    display: block;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .add-button:hover,
-  .delete-button:hover {
-    opacity: 0.8;
-  }
+.food-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.food-container h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.food-container p {
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.food-container label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.food-container input {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.food-container button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2ecc71;
+  color: white;
+  cursor: pointer;
+}
+
+.food-container button:hover {
+  background-color: #27ae60;
+}

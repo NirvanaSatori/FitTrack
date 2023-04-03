@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   
   resources :users, only: [:create]
-  resources :targets, except: [:index]
   resources :foods
   resources :exercises
-  # resources :target_foods
-  # resources :target_exercises
+  resources :target_foods
+  resources :target_exercises
+  resources :targets do
+    resources :target_exercises, only: [:index]
+    get 'foods', to: 'target_foods#index'
+  end
  
- 
-
   post "/login", to:"sessions#login"
   get "/sessions", to: "sessions#index"
   delete "/logout", to: "sessions#logout"

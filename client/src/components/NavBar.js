@@ -1,41 +1,85 @@
-import React from 'react'
-import { NavLink } from "react-router-dom";
-
-// import { FcSportsMode } from "react-icons/fc";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './NavBar.css';
+// import { FcSportsMode } from 'react-icons/fc';
 
 function NavBar() {
-  
-
   return (
-    <>
-    <div className='navbar'>
-      <h1> Fit<b className='tracker'>Track</b> </h1>
-      <NavLink to="/home"  className="nav-link"style={{ textDecoration: 'none'}}>
-          Home
-        </NavLink>
-        <NavLink to="/aboutus" className="nav-link" style={{ textDecoration: 'none' }}>
-         About Us
-        </NavLink>
-        <NavLink to="/exercises"className="nav-link"style={{ textDecoration: 'none' }}>
-          Exercises
-        </NavLink>
-        <NavLink to="/food" className="nav-link"style={{ textDecoration: 'none' }}>
-         Food
-        </NavLink>
-        <NavLink to="/targets" className="nav-link"style={{ textDecoration: 'none' }}>
-          Targets
-        </NavLink>
-        <NavLink to="/login" className="navlink"style={{ textDecoration: 'none' }}>
-          Login
-        </NavLink>
-        <NavLink to="/register" className="navlink"style={{ textDecoration: 'none' }}>
-        Register
-        </NavLink>
-    
-    </div>
-    </>
-  
-  )
+    <nav className="navbar">
+      <div className="navbar__logo">
+        <h1>
+          Fit<b className="navbar__logo-tracker">Track</b>
+        </h1>
+        {/* <FcSportsMode size={40} /> */}
+      </div>
+      <ul className="navbar__links">
+        <li>
+          <NavLink
+            to="/home"
+            className="navbar__link"
+            activeClassName="navbar__link--active"
+          >
+            Home
+          </NavLink>
+        </li>
+       
+        <li>
+          <NavLink
+            to="/targets"
+            className="navbar__link"
+            activeClassName="navbar__link--active"
+          >
+            Targets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/exercises"
+            className="navbar__link"
+            activeClassName="navbar__link--active"
+          >
+            Exercises
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/food"
+            className="navbar__link"
+            activeClassName="navbar__link--active"
+          >
+            Food
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/aboutus"
+            className="navbar__link"
+            activeClassName="navbar__link--active"
+          >
+            About Us
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/login"
+            className="navbar__button"
+            activeClassName="navbar__button--active"
+          >
+            Login
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/register"
+            className="navbar__button"
+            activeClassName="navbar__button--active"
+          >
+            Register
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
-export default NavBar
+export default NavBar;
