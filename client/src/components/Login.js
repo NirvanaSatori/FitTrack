@@ -9,7 +9,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (email === 'setEmail' && password === 'password') {
+    if (email === 'setEmail' && password === '') {
       // Show success alert
       Swal.fire({
         icon: 'success',
