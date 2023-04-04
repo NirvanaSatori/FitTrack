@@ -15,20 +15,23 @@ User.destroy_all
 
 
 # Create Users
-user1 = User.create(username: 'john_doe', email: 'john_doe@example.com', password_digest: 'password', gender: 'male')
-user2 = User.create(username: 'jane_doe', email: 'jane_doe@example.com', password_digest: 'password', gender: 'female')
-user3 = User.create(username: 'bob_smith', email: 'bob_smith@example.com', password_digest: 'password', gender: 'male')
+user1 = User.create(username: 'john_doe', email: 'john_doe@example.com', password: 'password', gender: 'male')
+user2 = User.create(username: 'jane_doe', email: 'jane_doe@example.com', password: 'password', gender: 'female')
+user3 = User.create(username: 'bob_smith', email: 'bob_smith@example.com', password: 'password', gender: 'male')
+user4 = User.create(username: 'Glen', email: 'glen@gmail.com', password: '12345', gender: 'male')
+
 
 # Create Target
 target1 = Target.create(current_weight: 70, target_weight: 60, name: 'loose weight', user: user1)
 target2 = Target.create(current_weight: 75, target_weight: 85, name: 'gain weight', user: user2)
 target3 = Target.create(current_weight: 80, target_weight: 80, name: 'maintain weight', user: user3)
-
+target4 = Target.create(current_weight: 80, target_weight: 80, name: 'maintain weight', user: user4)
 
 # Create Foods
 food1 = Food.create(name: 'Salmon', calories: 350, food_type: 'Seafood', image_url: 'https://rb.gy/ulpw')
 food2 = Food.create(name: 'Broccoli', calories: 55, food_type: 'Vegetable', image_url: 'https://rb.gy/cc35')
 food3 = Food.create(name: 'Brown Rice', calories: 220, food_type: 'Grain', image_url: 'https://rb.gy/nfrx')
+
 
 # Associate Foods with Target
 TargetFood.create(target: target1, food: food1)
@@ -38,8 +41,8 @@ TargetFood.create(target: target1, food: food3)
 TargetFood.create(target: target2, food: food1)
 TargetFood.create(target: target2, food: food2)
 
-TargetFood.create(target: target3, food: food1)
-TargetFood.create(target: target3, food: food3)
+TargetFood.create(target: target4, food: food1)
+TargetFood.create(target: target4, food: food3)
 
 # Create Exercises
 exercise1 = Exercise.create(name: 'Running', duration: 30, calories_burned: 300, image_url: 'https://rb.gy/yca2')
@@ -53,6 +56,6 @@ TargetExercise.create(target: target1, exercise: exercise3)
 TargetExercise.create(target: target2, exercise: exercise2)
 TargetExercise.create(target: target2, exercise: exercise3)
 
-TargetExercise.create(target: target3, exercise: exercise1)
-TargetExercise.create(target: target3, exercise: exercise2)
+TargetExercise.create(target: target4, exercise: exercise1)
+TargetExercise.create(target: target4, exercise: exercise2)
 

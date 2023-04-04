@@ -22,7 +22,15 @@ function NavBar() {
             Home
           </NavLink>
         </li>
-       
+        <li>
+          <NavLink
+            to="/dashboard"
+            className="navbar__link"
+            activeClassName="navbar__link--active"
+          >
+            Dashboard
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="/targets"
