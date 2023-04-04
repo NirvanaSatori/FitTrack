@@ -9,22 +9,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (email === 'setEmail' && password === '') {
-      // Show success alert
-      Swal.fire({
-        icon: 'success',
-        title: 'Login Successful',
-        text: 'Welcome back, Admin!',
-      });
-    } else {
-      // Show error alert
-      Swal.fire({
-        icon: 'error',
-        title: 'Login Failed',
-        text: 'Incorrect email or password',
-      });
-    }
-
+   
     console.log(`email: ${email}, Password: ${password}`);
 
     fetch('/login', {
@@ -36,7 +21,24 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(data.email);
+        console.log(email);
+        if (data.email === email ) {
+          // Show success alert
+          Swal.fire({
+            icon: 'success',
+            title: 'Login Successful',
+            text: 'Welcome back, Admin!',
+          });
+        } else {
+          // Show error alert
+          Swal.fire({
+            icon: 'error',
+            title: 'Login Failed',
+            text: 'Incorrect email or password',
+          });
+        }
+    
         // handle successful login, e.g. redirect to dashboard
       })
       .catch((error) => console.error(error));
