@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Login.css';
 import Swal from 'sweetalert2';
 
+
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,7 +31,8 @@ const Login = () => {
             icon: 'success',
             title: 'Login Successful',
             text: 'Welcome back, Admin!',
-          });
+          }); 
+          window.location.href = '/';
         } else {
           // Show error alert
           Swal.fire({
@@ -38,7 +41,7 @@ const Login = () => {
             text: 'Incorrect email or password',
           });
         }
-    
+       
         // handle successful login, e.g. redirect to dashboard
       })
       .catch((error) => console.error(error));
