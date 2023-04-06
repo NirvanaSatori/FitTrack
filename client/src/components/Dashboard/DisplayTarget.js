@@ -30,12 +30,14 @@ function DisplayTarget({user}) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    console.log(formData.name)
+
+    const nformData = Object.fromEntries(formData.entries())
+    console.log(nformData.name)
     console.log(editTarget.id)
 
-    fetch(`/target/${editTarget.id}`, {
+    fetch(`/target/${id}`, {
       method: 'PATCH',
-      body: formData,
+      body: nformData,
     })
       .then(response => {
         if (!response.ok) {

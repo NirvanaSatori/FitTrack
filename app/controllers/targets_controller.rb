@@ -32,7 +32,7 @@ class TargetsController < ApplicationController
     
 
     def destroy
-      target = @current_user.targets.find(params[:id])
+      target = @current_user.targets
       target.destroy
       head :no_content
     end
