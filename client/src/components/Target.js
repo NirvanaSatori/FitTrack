@@ -67,7 +67,7 @@ function Target() {
         <h2>Targets can either be:</h2>
         <ul>
           <li>loose weight</li>
-          <li>Gain weight</li>
+          <li>gain weight</li>
           <li>Maintain weight</li>
         </ul>
       </div>
