@@ -11,8 +11,8 @@ class TargetsController < ApplicationController
       render json: Target.all, status: :ok
     end
 
-    def show
-      target = Target.find(params[:id])
+    def show      
+      target = @current_user.targets
       render json: target, include: [:target, "target.target_foods", "target.target_exercises"], status: :ok
     end
 
@@ -25,7 +25,7 @@ class TargetsController < ApplicationController
       update_target_params = { 
         current_weight: params[:current_weight], 
         target_weight: params[:target_weight] }
-      target = @current_user.targets.find(params[:id])
+      target = @current_user.targets
       target.update!(update_target_params)
       render json: target, serializer: CustomTargetSerializer, status: :ok
     end

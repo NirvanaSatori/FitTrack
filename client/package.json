@@ -22,12 +22,12 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.9",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "PORT=4000 react-scripts start",
+    "start": "PORT=4000 react-scripts start --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
