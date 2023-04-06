@@ -1,9 +1,5 @@
 class TargetsController < ApplicationController
 
-  before_action :authorize
-  # skip_before_action :authorize, only: [:index]
-  
-  wrap_parameters format: []
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
@@ -22,14 +18,8 @@ class TargetsController < ApplicationController
     end
 
     def update
-      update_target_params = { 
-        name: params[:name],
-        current_weight: params[:current_weight], 
-        target_weight: params[:target_weight] }
       target = @current_user.targets
-      
-      target.update!(update_target_params)
-      
+      target.update!(update_target_params)   
       render json: target, status: :ok
     end
     
@@ -54,4 +44,9 @@ class TargetsController < ApplicationController
     def render_unprocessable_entity(invalid)
       render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
     end
+
+    def  update_target_params
+      params.permit(:name, :current_weight, :target_weight)
+    end
+
 end
