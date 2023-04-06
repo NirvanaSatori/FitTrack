@@ -23,17 +23,20 @@ class TargetsController < ApplicationController
 
     def update
       update_target_params = { 
+        name: params[:name],
         current_weight: params[:current_weight], 
         target_weight: params[:target_weight] }
       target = @current_user.targets
+      
       target.update!(update_target_params)
-      render json: target, serializer: CustomTargetSerializer, status: :ok
+      
+      render json: target, status: :ok
     end
     
 
     def destroy
       target = @current_user.targets
-      target.destroy
+      target.delete 
       head :no_content
     end
 

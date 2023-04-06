@@ -31,13 +31,17 @@ function DisplayTarget({user}) {
 
     const formData = new FormData(event.target);
 
-    const nformData = Object.fromEntries(formData.entries())
-    console.log(nformData.name)
+    const nformData = Object.fromEntries(formData)
+    console.log(nformData)
     console.log(editTarget.id)
+    
 
-    fetch(`/target/${id}`, {
+    fetch(`/targets/${id}`, {
       method: 'PATCH',
-      body: nformData,
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify(nformData),
     })
       .then(response => {
         if (!response.ok) {
@@ -84,11 +88,11 @@ function DisplayTarget({user}) {
               </Form.Group>
               <Form.Group>
                 <Form.Label>Current Weight</Form.Label>
-                <Form.Control type="number" name="currentWeight" defaultValue={target[0].current_weight} required />
+                <Form.Control type="number" name="current_weight" defaultValue={target[0].current_weight} required />
               </Form.Group>
               <Form.Group>
                 <Form.Label>Target Weight</Form.Label>
-                <Form.Control type="number" name="targetWeight" defaultValue={target[0].target_weight} required />
+                <Form.Control type="number" name="target_weight" defaultValue={target[0].target_weight} required />
               </Form.Group>
               <Button variant="primary" type="submit" className="mr-2">
                 Update
