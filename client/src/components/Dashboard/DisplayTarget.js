@@ -23,7 +23,7 @@ function DisplayTarget({user}) {
       .catch(error => {
         console.error('There was a problem retrieving the target:', error);
       });
-  }, []);
+  }, [id]);
 
 
   const handleUpdateTarget = event => {
