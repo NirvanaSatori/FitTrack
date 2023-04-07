@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-// import { FcSportsMode } from 'react-icons/fc';
+import { FcSportsMode } from 'react-icons/fc';
 
 function NavBar() {
   return (
@@ -10,7 +10,7 @@ function NavBar() {
         <h1>
           Fit<b className="navbar__logo-tracker">Track</b>
         </h1>
-        {/* <FcSportsMode size={40} /> */}
+        <FcSportsMode size={40} />
       </div>
       <ul className="navbar__links">
         <li>

@@ -10,12 +10,14 @@
     display: flex;
     align-items: center;
     color: white;
+    height: 6rem; /* Adjust the height to your preference */
   }
   
   .navbar__logo h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-right: 1rem;
     font-weight: bold;
+    margin-bottom: 0; /* Remove the default margin-bottom */
   }
   
   .navbar__logo-tracker {
