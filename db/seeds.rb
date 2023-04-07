@@ -41,6 +41,9 @@ TargetFood.create(target: target1, food: food3)
 TargetFood.create(target: target2, food: food1)
 TargetFood.create(target: target2, food: food2)
 
+TargetFood.create(target: target3, food: food1)
+TargetFood.create(target: target3, food: food3)
+
 TargetFood.create(target: target4, food: food1)
 TargetFood.create(target: target4, food: food3)
 
@@ -55,6 +58,10 @@ TargetExercise.create(target: target1, exercise: exercise3)
 
 TargetExercise.create(target: target2, exercise: exercise2)
 TargetExercise.create(target: target2, exercise: exercise3)
+
+TargetExercise.create(target: target3, exercise: exercise1)
+TargetExercise.create(target: target3, exercise: exercise2)
+
 
 TargetExercise.create(target: target4, exercise: exercise1)
 TargetExercise.create(target: target4, exercise: exercise2)
