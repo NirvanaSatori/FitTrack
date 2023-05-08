@@ -1,4 +1,4 @@
-## GROUP SIX PHASE 4 PROJECT
+## GROUP PROJECT
 
 ## FITTRACK APP...
   Created,Developed and Modified by...
@@ -29,7 +29,6 @@ With our group members brilliant thinking and innovative minds we thought about 
 
 
 ## HOW TO RUN THE APP
-The app is not deployed yet so there are a couple of steps needed to be followed in order for the the project.
    Setup
 
 Start by cloning (not forking) the project template repository and removing the remote:
